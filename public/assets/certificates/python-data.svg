@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="py-cert-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a121d"/>
+      <stop offset="50%" stop-color="#111c2e"/>
+      <stop offset="100%" stop-color="#141838"/>
+    </linearGradient>
+    <linearGradient id="py-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="url(#py-cert-bg)"/>
+  <rect x="25" y="25" width="850" height="550" fill="none" stroke="#10b981" stroke-width="2.5" rx="10"/>
+  <rect x="35" y="35" width="830" height="530" fill="none" stroke="#1e293b" stroke-width="1" rx="8"/>
+
+  <text x="450" y="100" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="4">TECHNICAL SPECIALIZATION</text>
+  <line x1="330" y1="115" x2="570" y2="115" stroke="url(#py-grad)" stroke-width="2"/>
+
+  <text x="450" y="170" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="15" text-anchor="middle">AWARDED TO</text>
+  <text x="450" y="225" fill="#ffffff" font-family="system-ui, sans-serif" font-size="34" font-weight="800" text-anchor="middle" letter-spacing="1">Abhishek Singh Yadav</text>
+  <line x1="260" y1="245" x2="640" y2="245" stroke="#334155" stroke-width="1"/>
+
+  <text x="450" y="290" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="15" text-anchor="middle">in recognition of advanced coursework and practical labs in</text>
+  <text x="450" y="340" fill="url(#py-grad)" font-family="system-ui, sans-serif" font-size="26" font-weight="800" text-anchor="middle">Python for Data Analytics &amp; Scientific Computing</text>
+
+  <text x="450" y="385" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Demonstrating skills in Pandas, NumPy Array Vectorization, Matplotlib Visualizations, and EDA pipelines</text>
+
+  <!-- Seal -->
+  <g transform="translate(450, 480)">
+    <circle cx="0" cy="0" r="45" fill="#064e3b" stroke="#10b981" stroke-width="3"/>
+    <circle cx="0" cy="0" r="37" fill="none" stroke="#34d399" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="0" y="-8" fill="#a7f3d0" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle" letter-spacing="1">HONORS</text>
+    <text x="0" y="10" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">DATA</text>
+    <text x="0" y="24" fill="#94a3b8" font-family="sans-serif" font-size="8" text-anchor="middle">PYTHON LABS</text>
+  </g>
+
+  <g transform="translate(140, 490)">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#475569" stroke-width="1.5"/>
+    <text x="90" y="20" fill="#e2e8f0" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Analytics Program</text>
+    <text x="90" y="35" fill="#64748b" font-family="sans-serif" font-size="11" text-anchor="middle">Practical Evaluation</text>
+  </g>
+
+  <g transform="translate(580, 490)">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#475569" stroke-width="1.5"/>
+    <text x="90" y="20" fill="#e2e8f0" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Verification ID</text>
+    <text x="90" y="35" fill="#64748b" font-family="sans-serif" font-size="11" text-anchor="middle">ASY-PY-2024-DATA</text>
+  </g>
+</svg>

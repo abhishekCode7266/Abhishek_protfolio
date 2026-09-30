@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ms-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a101d"/>
+      <stop offset="100%" stop-color="#141a2e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#ms-bg)"/>
+  <rect x="24" y="24" width="752" height="452" rx="12" fill="#0d1322" stroke="#253248" stroke-width="1.5"/>
+  <rect x="24" y="24" width="752" height="42" rx="12" fill="#141c2e"/>
+  <circle cx="50" cy="45" r="6" fill="#ef4444"/>
+  <circle cx="70" cy="45" r="6" fill="#eab308"/>
+  <circle cx="90" cy="45" r="6" fill="#22c55e"/>
+  <text x="400" y="49" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Hospital &amp; Hotel Management — Java OOP Architecture</text>
+
+  <!-- Left: System Navigation -->
+  <rect x="44" y="86" width="190" height="370" rx="8" fill="#101726"/>
+  <text x="64" y="118" fill="#a855f7" font-family="sans-serif" font-size="13" font-weight="bold">SYSTEM MODULES</text>
+
+  <rect x="54" y="136" width="170" height="32" rx="4" fill="#1e1b4b"/>
+  <text x="68" y="157" fill="#c084fc" font-family="sans-serif" font-size="12">🏨 Room Allocation</text>
+
+  <rect x="54" y="176" width="170" height="32" rx="4" fill="#161f31"/>
+  <text x="68" y="197" fill="#cbd5e1" font-family="sans-serif" font-size="12">🏥 Patient In-Take</text>
+
+  <rect x="54" y="216" width="170" height="32" rx="4" fill="#161f31"/>
+  <text x="68" y="237" fill="#cbd5e1" font-family="sans-serif" font-size="12">💳 Billing &amp; Invoicing</text>
+
+  <rect x="54" y="256" width="170" height="32" rx="4" fill="#161f31"/>
+  <text x="68" y="277" fill="#cbd5e1" font-family="sans-serif" font-size="12">📋 Records DB</text>
+
+  <!-- Right: Records Table & Java Class Architecture -->
+  <g transform="translate(250, 86)">
+    <!-- Summary Cards -->
+    <rect x="0" y="0" width="156" height="70" rx="6" fill="#151d30" stroke="#253248" stroke-width="1"/>
+    <text x="16" y="24" fill="#94a3b8" font-family="sans-serif" font-size="11">TOTAL ROOMS</text>
+    <text x="16" y="52" fill="#38bdf8" font-family="sans-serif" font-size="20" font-weight="bold">120 / 120</text>
+
+    <rect x="172" y="0" width="156" height="70" rx="6" fill="#151d30" stroke="#253248" stroke-width="1"/>
+    <text x="188" y="24" fill="#94a3b8" font-family="sans-serif" font-size="11">ACTIVE OCCUPANCY</text>
+    <text x="188" y="52" fill="#10b981" font-family="sans-serif" font-size="20" font-weight="bold">92%</text>
+
+    <rect x="344" y="0" width="156" height="70" rx="6" fill="#151d30" stroke="#253248" stroke-width="1"/>
+    <text x="360" y="24" fill="#94a3b8" font-family="sans-serif" font-size="11">BILLING STATUS</text>
+    <text x="360" y="52" fill="#f59e0b" font-family="sans-serif" font-size="20" font-weight="bold">Synchronized</text>
+
+    <!-- Table preview -->
+    <rect x="0" y="85" width="500" height="150" rx="6" fill="#0d121f" stroke="#1f293d" stroke-width="1"/>
+    <rect x="0" y="85" width="500" height="30" rx="6" fill="#141c2c"/>
+    <text x="16" y="105" fill="#94a3b8" font-family="monospace" font-size="11">ID</text>
+    <text x="80" y="105" fill="#94a3b8" font-family="monospace" font-size="11">PATIENT / GUEST</text>
+    <text x="220" y="105" fill="#94a3b8" font-family="monospace" font-size="11">ROOM TYPE</text>
+    <text x="340" y="105" fill="#94a3b8" font-family="monospace" font-size="11">DAYS</text>
+    <text x="420" y="105" fill="#94a3b8" font-family="monospace" font-size="11">STATUS</text>
+
+    <text x="16" y="135" fill="#cbd5e1" font-family="monospace" font-size="11">#101</text>
+    <text x="80" y="135" fill="#cbd5e1" font-family="monospace" font-size="11">Vikas Sharma</text>
+    <text x="220" y="135" fill="#cbd5e1" font-family="monospace" font-size="11">Deluxe Suite</text>
+    <text x="340" y="135" fill="#cbd5e1" font-family="monospace" font-size="11">3</text>
+    <text x="420" y="135" fill="#10b981" font-family="monospace" font-size="11">PAID ✓</text>
+
+    <text x="16" y="165" fill="#cbd5e1" font-family="monospace" font-size="11">#102</text>
+    <text x="80" y="165" fill="#cbd5e1" font-family="monospace" font-size="11">Ananya Patel</text>
+    <text x="220" y="135" fill="#cbd5e1" font-family="monospace" font-size="11">ICU Room 4</text>
+    <text x="340" y="165" fill="#cbd5e1" font-family="monospace" font-size="11">5</text>
+    <text x="420" y="165" fill="#38bdf8" font-family="monospace" font-size="11">ACTIVE</text>
+
+    <text x="16" y="195" fill="#cbd5e1" font-family="monospace" font-size="11">#103</text>
+    <text x="80" y="195" fill="#cbd5e1" font-family="monospace" font-size="11">Rohan Mehta</text>
+    <text x="220" y="195" fill="#cbd5e1" font-family="monospace" font-size="11">Executive Twin</text>
+    <text x="340" y="195" fill="#cbd5e1" font-family="monospace" font-size="11">2</text>
+    <text x="420" y="195" fill="#f59e0b" font-family="monospace" font-size="11">PENDING</text>
+
+    <!-- Java snippet below -->
+    <rect x="0" y="250" width="500" height="120" rx="6" fill="#090d16" stroke="#1c2538" stroke-width="1"/>
+    <text x="16" y="275" fill="#f43f5e" font-family="monospace" font-size="11">public class</text>
+    <text x="105" y="275" fill="#fbbf24" font-family="monospace" font-size="11">ReservationSystem</text>
+    <text x="240" y="275" fill="#cbd5e1" font-family="monospace" font-size="11">{</text>
+    
+    <text x="32" y="298" fill="#94a3b8" font-family="monospace" font-size="11">private Map&lt;Integer, Room&gt; roomRegistry = new ConcurrentHashMap&lt;&gt;();</text>
+    <text x="32" y="320" fill="#38bdf8" font-family="monospace" font-size="11">public synchronized Invoice checkout(int roomId) throws BookingException {</text>
+    <text x="48" y="342" fill="#10b981" font-family="monospace" font-size="11">return roomRegistry.get(roomId).computeBillWithTax();</text>
+    <text x="32" y="360" fill="#cbd5e1" font-family="monospace" font-size="11">}</text>
+  </g>
+</svg>

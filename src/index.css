@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070a12;
+  --surface: #0c101d;
+  --surface-light: #151b2e;
+  --primary: #8b5cf6;
+  --primary-light: #a855f7;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: rgba(139, 92, 246, 0.2);
+}
+
+html.light {
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-light: #f1f5f9;
+  --primary: #7c3aed;
+  --primary-light: #8b5cf6;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --border: rgba(124, 58, 237, 0.15);
+  color-scheme: light;
+}
+
+html.dark {
+  --background: #070a12;
+  --surface: #0c101d;
+  --surface-light: #151b2e;
+  --primary: #8b5cf6;
+  --primary-light: #a855f7;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: rgba(139, 92, 246, 0.2);
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #1e2640;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+/* Print & PDF Export Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  body > * {
+    display: none !important;
+  }
+
+  div[role="dialog"] {
+    display: block !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+  }
+
+  div[role="dialog"] > div {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  div[role="dialog"] header,
+  div[role="dialog"] .border-b,
+  div[role="dialog"] .border-t,
+  button {
+    display: none !important;
+  }
+
+  #printable-resume {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  @page {
+    margin: 15mm;
+    size: auto;
+  }
+}

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fv-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#19152e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#fv-bg)"/>
+  <rect x="24" y="24" width="752" height="452" rx="12" fill="#0d111d" stroke="#252f48" stroke-width="1.5"/>
+  <rect x="24" y="24" width="752" height="42" rx="12" fill="#141c2e"/>
+  <circle cx="50" cy="45" r="6" fill="#ef4444"/>
+  <circle cx="70" cy="45" r="6" fill="#eab308"/>
+  <circle cx="90" cy="45" r="6" fill="#22c55e"/>
+  <text x="400" y="49" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">FunVision — Computer Vision &amp; Real-time Camera Analytics</text>
+
+  <!-- Video Stream Canvas Simulator -->
+  <g transform="translate(44, 86)">
+    <rect width="460" height="370" rx="8" fill="#050811" stroke="#1f293d" stroke-width="1"/>
+    
+    <!-- Camera Overlay Grid -->
+    <line x1="230" y1="20" x2="230" y2="350" stroke="#38bdf8" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
+    <line x1="20" y1="185" x2="440" y2="185" stroke="#38bdf8" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
+
+    <!-- Detected Face Landmark Mesh Simulator -->
+    <ellipse cx="230" cy="180" rx="90" ry="110" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <circle cx="195" cy="160" r="14" stroke="#38bdf8" stroke-width="2" fill="none"/>
+    <circle cx="265" cy="160" r="14" stroke="#38bdf8" stroke-width="2" fill="none"/>
+    <circle cx="195" cy="160" r="4" fill="#38bdf8"/>
+    <circle cx="265" cy="160" r="4" fill="#38bdf8"/>
+    
+    <path d="M 230 170 L 230 200 L 220 205" stroke="#a855f7" stroke-width="2" fill="none"/>
+    <path d="M 200 230 Q 230 250 260 230" stroke="#10b981" stroke-width="2.5" fill="none"/>
+
+    <!-- Bounding Box -->
+    <rect x="120" y="55" width="220" height="260" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+    <rect x="120" y="35" width="130" height="20" fill="#22c55e"/>
+    <text x="130" y="49" fill="#052e16" font-family="monospace" font-size="11" font-weight="bold">PERSON: 98.4%</text>
+
+    <!-- Overlay Stats -->
+    <g transform="translate(16, 330)">
+      <rect width="180" height="26" rx="4" fill="#0f172a" opacity="0.8"/>
+      <text x="10" y="18" fill="#38bdf8" font-family="monospace" font-size="11">FPS: 60.0 | RES: 1080p</text>
+    </g>
+  </g>
+
+  <!-- Right: Python & OpenCV Pipeline Controls -->
+  <g transform="translate(520, 86)">
+    <rect width="236" height="370" rx="8" fill="#101728" stroke="#1f293d" stroke-width="1"/>
+    <text x="20" y="32" fill="#e2e8f0" font-family="sans-serif" font-size="13" font-weight="600">CV FILTERS &amp; MODES</text>
+
+    <rect x="16" y="50" width="204" height="40" rx="6" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="30" y="75" fill="#e9d5ff" font-family="sans-serif" font-size="12">✦ Facial Landmarks (Active)</text>
+
+    <rect x="16" y="100" width="204" height="40" rx="6" fill="#161e31"/>
+    <text x="30" y="125" fill="#94a3b8" font-family="sans-serif" font-size="12">✦ Edge Canny Detector</text>
+
+    <rect x="16" y="150" width="204" height="40" rx="6" fill="#161e31"/>
+    <text x="30" y="175" fill="#94a3b8" font-family="sans-serif" font-size="12">✦ Hand Gesture Tracking</text>
+
+    <!-- Pipeline snippet -->
+    <rect x="16" y="210" width="204" height="144" rx="6" fill="#0b0f19"/>
+    <text x="26" y="235" fill="#f43f5e" font-family="monospace" font-size="10">import cv2, numpy as np</text>
+    <text x="26" y="255" fill="#94a3b8" font-family="monospace" font-size="10">cap = cv2.VideoCapture(0)</text>
+    <text x="26" y="275" fill="#94a3b8" font-family="monospace" font-size="10">gray = cv2.cvtColor(</text>
+    <text x="36" y="295" fill="#cbd5e1" font-family="monospace" font-size="10">frame, cv2.COLOR_BGR2GRAY)</text>
+    <text x="26" y="315" fill="#38bdf8" font-family="monospace" font-size="10">landmarks = detect(gray)</text>
+    <text x="26" y="335" fill="#10b981" font-family="monospace" font-size="10">draw_mesh(frame, landmarks)</text>
+  </g>
+</svg>

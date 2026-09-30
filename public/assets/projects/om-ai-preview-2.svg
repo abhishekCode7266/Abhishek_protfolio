@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <rect width="800" height="500" rx="16" fill="#090d18"/>
+  <rect x="24" y="24" width="752" height="452" rx="12" fill="#0f1526" stroke="#2d3748" stroke-width="1.5"/>
+  <rect x="24" y="24" width="752" height="42" rx="12" fill="#171f38"/>
+  <circle cx="50" cy="45" r="6" fill="#ef4444"/>
+  <circle cx="70" cy="45" r="6" fill="#eab308"/>
+  <circle cx="90" cy="45" r="6" fill="#22c55e"/>
+  <text x="400" y="49" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">OM AI Action Assistant — Workflow Runner</text>
+  
+  <!-- Flow diagram -->
+  <g transform="translate(60, 100)">
+    <rect x="0" y="40" width="180" height="90" rx="10" fill="#1e293b" stroke="#6366f1" stroke-width="2"/>
+    <text x="90" y="75" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Natural Language</text>
+    <text x="90" y="98" fill="#94a3b8" font-family="sans-serif" font-size="12" text-anchor="middle">User Query Ingestion</text>
+
+    <!-- Arrow -->
+    <path d="M190 85 L240 85" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="4 4"/>
+    <polygon points="245,85 235,80 235,90" fill="#8b5cf6"/>
+
+    <rect x="250" y="40" width="180" height="90" rx="10" fill="#2e1065" stroke="#a855f7" stroke-width="2"/>
+    <text x="340" y="75" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">OM Intent Parser</text>
+    <text x="340" y="98" fill="#c084fc" font-family="sans-serif" font-size="12" text-anchor="middle">Task Classification</text>
+
+    <!-- Arrow -->
+    <path d="M440 85 L490 85" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="4 4"/>
+    <polygon points="495,85 485,80 485,90" fill="#8b5cf6"/>
+
+    <rect x="500" y="40" width="180" height="90" rx="10" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+    <text x="590" y="75" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Action Engine</text>
+    <text x="590" y="98" fill="#6ee7b7" font-family="sans-serif" font-size="12" text-anchor="middle">Execution &amp; Output</text>
+  </g>
+
+  <!-- Output log box -->
+  <rect x="60" y="270" width="680" height="170" rx="8" fill="#0b0f19" stroke="#1e293b" stroke-width="1"/>
+  <text x="80" y="300" fill="#38bdf8" font-family="monospace" font-size="13">$ om-assistant run --pipeline data-cleanse</text>
+  <text x="80" y="325" fill="#10b981" font-family="monospace" font-size="12">[INFO] Model loaded successfully: gemini-engine</text>
+  <text x="80" y="348" fill="#94a3b8" font-family="monospace" font-size="12">[INFO] Parsing commands with zero latency...</text>
+  <text x="80" y="371" fill="#e2e8f0" font-family="monospace" font-size="12">[SUCCESS] Workflow executed in 142ms. Ready for user preview.</text>
+  <text x="80" y="400" fill="#a855f7" font-family="monospace" font-size="12">&gt; Assistant waiting for next action...</text>
+</svg>
