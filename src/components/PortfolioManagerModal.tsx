@@ -21,6 +21,7 @@ import {
   Code,
   Github,
   GitCommit,
+  BarChart3,
   RefreshCw,
   Search,
   ExternalLink,
@@ -28,11 +29,12 @@ import {
   Webhook,
 } from "lucide-react";
 import { RecentActivityPanel } from "@/components/RecentActivityPanel";
+import { GitHubAnalyticsSection } from "@/components/GitHubAnalyticsSection";
 
 interface PortfolioManagerModalProps {
   isOpen: boolean;
   onClose: () => void;
-  defaultTab?: "certificates" | "experience" | "education" | "skills" | "resume" | "github" | "activity" | "webhook" | "export";
+  defaultTab?: "certificates" | "experience" | "education" | "skills" | "resume" | "github" | "activity" | "analytics" | "webhook" | "export";
 }
 
 export const PortfolioManagerModal: React.FC<PortfolioManagerModalProps> = ({
@@ -71,7 +73,7 @@ export const PortfolioManagerModal: React.FC<PortfolioManagerModalProps> = ({
   } = usePortfolioData();
 
   const [activeTab, setActiveTab] = useState<
-    "certificates" | "experience" | "education" | "skills" | "resume" | "github" | "activity" | "webhook" | "export"
+    "certificates" | "experience" | "education" | "skills" | "resume" | "github" | "activity" | "analytics" | "webhook" | "export"
   >(defaultTab);
 
   // Global search bar state across projects and certificates
@@ -545,6 +547,21 @@ export const PortfolioManagerModal: React.FC<PortfolioManagerModalProps> = ({
             <span>Recent Activity</span>
             <span className="px-1.5 py-0.5 rounded-full text-[9px] font-mono bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">
               5 Commits
+            </span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("analytics")}
+            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl whitespace-nowrap transition-all cursor-pointer ${
+              activeTab === "analytics"
+                ? "bg-purple-600 text-white shadow-sm font-semibold"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
+            }`}
+          >
+            <BarChart3 className="w-4 h-4" />
+            <span>GitHub Analytics</span>
+            <span className="px-1.5 py-0.5 rounded-full text-[9px] font-mono bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">
+              D3.js
             </span>
           </button>
 
@@ -1449,7 +1466,10 @@ export const PortfolioManagerModal: React.FC<PortfolioManagerModalProps> = ({
           {/* TAB 7: RECENT ACTIVITY & COMMIT TRACKER (STANDALONE) */}
           {activeTab === "activity" && <RecentActivityPanel />}
 
-          {/* TAB 8: GITHUB WEBHOOK LISTENER CONFIGURATION & REAL-TIME IMPORT */}
+          {/* TAB 8: GITHUB ANALYTICS & D3 CONTRIBUTION STREAKS */}
+          {activeTab === "analytics" && <GitHubAnalyticsSection />}
+
+          {/* TAB 9: GITHUB WEBHOOK LISTENER CONFIGURATION & REAL-TIME IMPORT */}
           {activeTab === "webhook" && <GitHubWebhookConfig />}
 
           {/* TAB 8: EXPORT DATA TO GITHUB FILE */}

@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - master
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -31,7 +32,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps || npm install --legacy-peer-deps
 
       - name: Validate Portfolio Data & Assets
         run: node scripts/validate-content.mjs
@@ -39,13 +40,14 @@ jobs:
       - name: TypeScript Typecheck & Lint
         run: npm run lint
 
+      - name: Setup Pages configuration
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+
       - name: Build static project for GitHub Pages
         run: npm run build
         env:
           GITHUB_PAGES: "true"
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

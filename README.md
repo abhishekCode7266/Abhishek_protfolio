@@ -20,6 +20,7 @@ Engineered with a **Single Source of Truth** architecture: all content is comple
 
 ## ✨ Features
 
+- **GitHub Analytics & D3.js Contribution Streaks**: Comprehensive analytics dashboard in the Portfolio Studio featuring 4 live metrics (Current Streak, Longest Streak, Total Commits, Weekly Velocity), a D3.js spline area chart visualizing commit frequency over time (30D/90D/180D), and a 16-week GitHub contribution heatmap matrix.
 - **GitHub Recent Activity & Progress Tracker**: Live commit tracker panel embedded in the Portfolio Manager Studio that queries the last 5 commits from GitHub (`/api/github/commits`), displaying conventional commit tags (`feat`, `fix`, `chore`), 1-click SHA copy, author metadata, relative timestamps, and direct commit links.
 - **Interactive D3.js Language Distribution Visualization**: Custom D3.js visualization engine integrated into the Projects section showing real-time repository language share with radial Donut and ranked Bar chart view modes, glow hover interactions, and 1-click language filtering across all projects.
 - **GitHub Webhook Listener & Real-Time Auto-Import**: Built-in webhook listener (`/api/github/webhook`) and Server-Sent Events stream (`/api/github/events`) configured in the Portfolio Studio with step-by-step setup, payload URL copy, secret token verification, live delivery logs, and a functional test event simulator to automatically import new repositories.
@@ -197,15 +198,24 @@ git push origin main
 
 ---
 
-## 🚀 GitHub Actions CI/CD Pipeline
+## 🚀 GitHub Actions CI/CD Pipeline & GitHub Pages Setup
 
-The `.github/workflows/deploy.yml` workflow performs:
-1. **Checkout Code**: Retrieves the repository on `push` to `main` or manual `workflow_dispatch`.
+The `.github/workflows/deploy.yml` workflow automatically builds and publishes your portfolio to GitHub Pages whenever you push to `main` or `master`.
+
+### 1-Time GitHub Pages Setup (Required on GitHub):
+1. Go to your GitHub repository: `https://github.com/abhishekCode7266/Abhishek_portfolio` (or your repo name).
+2. Click **Settings** (⚙️ top navigation).
+3. In the left sidebar, click **Pages**.
+4. Under **Build and deployment** > **Source**, select **GitHub Actions** (instead of *"Deploy from a branch"*).
+5. Push any commit or go to the **Actions** tab and click **Run workflow**.
+
+### Pipeline Steps:
+1. **Checkout Code**: Retrieves the repository on `push` to `main` or `master` (or manual `workflow_dispatch`).
 2. **Node Setup**: Uses Node.js 20 with `npm` caching.
-3. **Dependency Check**: Runs `npm ci`.
+3. **Dependency Check**: Runs `npm ci --legacy-peer-deps || npm install --legacy-peer-deps` with `.npmrc` to prevent peer-dependency conflicts.
 4. **Validation**: Executes `node scripts/validate-content.mjs` to ensure no broken images or missing files.
-5. **Static Compilation**: Runs `npm run build` with `GITHUB_PAGES=true` to embed the `/Abhishek_portfolio/` base URL.
-6. **Pages Deployment**: Uses official `actions/deploy-pages@v4` to publish the site to GitHub Pages.
+5. **Static Compilation**: Runs `npm run build` using relative `base: './'` to generate `dist/`, `dist/.nojekyll`, and `dist/404.html`.
+6. **Pages Deployment**: Uses official `actions/deploy-pages@v4` to publish the site to GitHub Pages without asset 404 errors.
 
 ---
 
