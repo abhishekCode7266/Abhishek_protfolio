@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
-    base: process.env.VITE_BASE_PATH || './',
+    base: process.env.VITE_BASE_PATH || (process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` : './'),
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
