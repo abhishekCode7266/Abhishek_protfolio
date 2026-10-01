@@ -46,6 +46,9 @@ certImages.forEach(img => checkFileExists(img, `Certificate Image (${img})`));
 
 // 4. Verify data files exist
 const dataFiles = [
+  'src/main.tsx',
+  'src/App.tsx',
+  'src/index.css',
   'src/data/site.ts',
   'src/data/profile.ts',
   'src/data/socials.ts',
