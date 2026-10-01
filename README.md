@@ -52,8 +52,8 @@ Engineered with a **Single Source of Truth** architecture: all content is comple
 ## 🛠️ Tech Stack
 
 - **Framework**: React 19 + TypeScript
-- **Bundler**: Vite 8
-- **Styling**: Tailwind CSS 4
+- **Bundler**: Vite 6
+- **Styling**: Tailwind CSS 3 + PostCSS
 - **Icons**: Lucide React
 - **Animations**: Motion
 - **Deployment**: GitHub Pages via GitHub Actions (`actions/deploy-pages@v4`)
