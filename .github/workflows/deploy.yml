@@ -32,7 +32,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci || npm install --include=optional
 
       - name: Validate Portfolio Data & Assets
         run: node scripts/validate-content.mjs
